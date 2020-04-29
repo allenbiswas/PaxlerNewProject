@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>jQuarry</title>
+    <style type="text/css">
+        ul li{
+            flex-basis: 20%;
+            max-width: 20%;
+            width: 100%;
+        }
+        button, input {
+            color: aqua !important;
+            width: 100%;
+            padding-top: 20px !important;
+            padding-bottom: 20px !important;
+            border-radius: 0 !important;
+            box-shadow: 0 0 1px white !important;
+        }
+
+    input{
+        background-color: #333 !important;
+    }
+    </style>
+  </head>
+  <body>
+
+<div class="container py-5 my-5">
+
+     <div class="row justify-content-center">
+         <div class="col-5">
+            <input type="text" class="form-control" disabled>
+            <ul class="nav justify-content-content">
+                <li><button class="btn btn-dark one">1</button></li>
+                <li><button class="btn btn-dark two">2</button></li>
+                <li><button class="btn btn-dark three">3</button></li>
+                <li><button class="btn btn-dark four">4</button></li>
+                <li><button class="btn btn-dark five">5</button></li>
+            </ul>
+            <ul class="nav justify-content-center">
+                <li><button class="btn btn-dark six">6</button></li>
+                <li><button class="btn btn-dark seven">7</button></li>
+                <li><button class="btn btn-dark eight">8</button></li>
+                <li><button class="btn btn-dark nine">9</button></li>
+                <li><button class="btn btn-dark zero">0</button></li>
+            </ul>
+            <ul class="nav justify-content-center">
+                <li><button class="btn btn-dark add">+</button></li>
+                <li><button class="btn btn-dark sub">-</button></li>
+                <li><button class="btn btn-dark mult">*</button></li>
+                <li><button class="btn btn-dark div">/</button></li>
+                <li><button class="btn btn-dark equal">=</button></li>
+            </ul>
+            
+               
+
+         </div>
+         <div class="col-7">
+            <input type="text" class="result">
+            <button class="click btn-danger btn">Get Multiplication table</button>
+             <h1></h1>
+         </div>
+     </div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    
+    $(function(){
+
+        $(".click").click(function(){
+         var a= 10;
+        var c= $(".result").val();
+        var b= "";
+        
+
+        for(x=1 ; x<=a ; x++){
+
+            b += c + " x " + x +" = "+ c*x + "<br>";
+
+            $("h1").html(b);
+
+        }   
+        })
+
+        
+
+        
+
+
+
+
+        var a= "";
+        var In= $("input");
+
+        $(".one").click(function(){ 
+            a +=1;
+            In.val(a);
+        });
+        
+        $(".two").click(function(){ 
+            a +=2;
+            In.val(a);
+        });
+        
+        $(".three").click(function(){ 
+            a +=3;
+            In.val(a);
+        });
+
+        
+        $(".four").click(function(){ 
+            a +=4;
+            In.val(a);
+        });
+
+        
+        $(".five").click(function(){ 
+            a +=5;
+            In.val(a);
+        });
+
+        
+        $(".six").click(function(){ 
+            a +=6;
+            In.val(a);
+        });
+
+        
+        $(".seven").click(function(){ 
+            a +=7;
+            In.val(a);
+        });
+
+        
+        $(".eight").click(function(){ 
+            a +=8;
+            In.val(a);
+        });
+
+        
+        $(".nine").click(function(){ 
+            a +=9;
+            In.val(a);
+        });
+
+        
+        $(".zero").click(function(){ 
+            a +=0;
+            In.val(a);
+        });
+
+        
+        $(".add").click(function(){ 
+            a +="+";
+            In.val(a);
+        });
+
+        
+        $(".sub").click(function(){ 
+            a +="-";
+            In.val(a);
+        });
+
+        
+        $(".div").click(function(){ 
+            a +="/";
+            In.val(a);
+        });
+
+        
+        $(".mult").click(function(){ 
+            a +="*";
+            In.val(a);
+        });
+
+        
+        $(".equal").click(function(){ 
+            a = eval(In.val());
+            In.val(a);
+        });
+
+        
+    });
+</script>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> -->
+</html>
